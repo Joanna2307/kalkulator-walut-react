@@ -38,7 +38,7 @@ const Form = () => {
             >
               {currency.map((item) => (
                 <option key={item.code || item.rate} value={item.rate}>
-                  {item.code}
+                  {item.name} ({item.code})
                 </option>
               ))}
             </select>
@@ -58,7 +58,7 @@ const Form = () => {
             >
               {currency.map((item) => (
                 <option key={item.code || item.rate} value={item.rate}>
-                  {item.code}
+                  {item.name} ({item.code})
                 </option>
               ))}
             </select>
