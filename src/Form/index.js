@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css";
-import Result from "../Result";
-import Calculate from "../Calculate";
 
 const Form = (props) => (
   <form className="form">
