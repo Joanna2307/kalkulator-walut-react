@@ -1,24 +1,24 @@
 export const currency = [
   {
-    short: "PLN",
+    code: "PLN",
     name: "Złoty polski",
-    rate: 1,
+    rate: 1.0,
   },
 
   {
-    short: "USD",
+    code: "USD",
     name: "Dolar amerykański",
     rate: 0.25,
   },
 
   {
-    short: "GBP",
+    code: "GBP",
     name: "Funt brytyjski",
     rate: 0.19,
   },
 
   {
-    short: "EUR",
+    code: "EUR",
     name: "Euro",
     rate: 0.23,
   },
