@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./style.css";
 import Calculate from "../Calculate";
 import Result from "../Result";
+import { currency } from "../currency";
 
-const Form = ({ currency }) => {
+const Form = () => {
   const [fromCurrency, setFromCurrency] = useState(currency[0].rate);
   const [toCurrency, setToCurrency] = useState(currency[0].rate);
   const [amount, setAmount] = useState("");
@@ -36,7 +37,7 @@ const Form = ({ currency }) => {
               }
             >
               {currency.map((item) => (
-                <option key={item.code} value={item.rate}>
+                <option key={item.code || item.rate} value={item.rate}>
                   {item.code}
                 </option>
               ))}
@@ -56,7 +57,7 @@ const Form = ({ currency }) => {
               }
             >
               {currency.map((item) => (
-                <option key={item.code} value={item.rate}>
+                <option key={item.code || item.rate} value={item.rate}>
                   {item.code}
                 </option>
               ))}
@@ -84,7 +85,6 @@ const Form = ({ currency }) => {
         </div>
 
         <div className="form__result" name="result">
-          Kwota po przeliczeniu:
           <Result result={result} />
         </div>
       </fieldset>
