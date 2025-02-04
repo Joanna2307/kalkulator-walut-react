@@ -1,3 +1,43 @@
+# Currency conventer
+
+This project is a simple web application that converts currencies.
+
+![Kalkulator walut](https://i.postimg.cc/L5PxYCTR/screenreact.png)
+
+## Demo:
+
+(https://joanna2307.github.io/kalkulator-walut/)
+
+## Currencies available:
+
+1. **PLN** - Polish Złoty
+2. **EUR** - Euro
+3. **USD** - US Dollar
+4. **GBP** - British pound
+
+## Features:
+
+- Easy to use
+- Supports main currencies
+- Option to input custom amounts.
+
+## Instruction
+
+1. Choose currency that you want to convert from
+2. Choose currency that you wnat to convert to
+3. Enter the amount
+4. Click "Convert"
+5. You will see converted amount at the bottom, under the button.
+
+## Technologies used:
+
+- **HTML/CSS** - for the front-end structure and styling.
+- **Java script** - for functionality and interactivity.
+
+### Contact me:
+
+If you have any questions: [CONTACT ME](mailto:joanna.gorniak.00@gmail.com)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -30,41 +70,3 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
