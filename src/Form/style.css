@@ -1,0 +1,75 @@
+.form {
+  max-width: 60%;
+  margin: auto;
+  margin-top: 5%;
+  color: rgb(31, 119, 119);
+}
+.form__fieldset {
+  border: 3px solid rgb(31, 119, 119);
+  border-radius: 15px;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 20px 0;
+  border-style: none;
+  box-shadow: 2px 4px 24px 2px rgb(31, 119, 119);
+}
+.form__legend {
+  font-weight: 400;
+  font-size: 1.5em;
+  padding: 10px;
+  border: 1px solid rgb(31, 119, 119);
+  border-radius: 15px;
+  background-color: whitesmoke;
+}
+.form__label {
+  margin-bottom: 5px;
+  padding: 10px;
+  font-weight: 300;
+  display: block;
+  width: 100%;
+}
+.form__select {
+  padding: 5px;
+  width: 100%;
+  color: rgb(31, 119, 119);
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.form__input {
+  padding: 5px;
+  width: 100%;
+  color: rgb(31, 119, 119);
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.form__select:hover {
+  background-color: rgb(177, 212, 234);
+}
+.form__result {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+.form__button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: rgb(31, 119, 119);
+  border: none;
+}
+
+.form__button:active {
+  background-color: whitesmoke;
+  color: rgb(31, 119, 119);
+}
+
+.form__caption {
+  max-width: 60%;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
