@@ -6,7 +6,7 @@ This project is a simple web application that converts currencies.
 
 ## Demo:
 
-(https://joanna2307.github.io/kalkulator-walut/)
+(https://joanna2307.github.io/kalkulator-walut-react/)
 
 ## Currencies available:
 
