@@ -3,6 +3,7 @@ import "./style.css";
 import Calculate from "../Calculate";
 import Result from "../Result";
 import { currency } from "../currency";
+import Time from "../Time";
 
 const Form = () => {
   const [fromCurrency, setFromCurrency] = useState(currency[0].rate);
@@ -24,7 +25,7 @@ const Form = () => {
     <form className="form" onSubmit={onFormSubmit}>
       <fieldset className="form__fieldset">
         <legend className="form__legend">Kalkulator walut</legend>
-
+        <Time />
         <div>
           <label className="form__label">
             Przelicz z:
