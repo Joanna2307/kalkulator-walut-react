@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import "./style.css";
 import Calculate from "../Calculate";
 import Result from "../Result";
 import { currency } from "../currency";
 import Time from "../Time";
+import {
+  StyledForm,
+  Fieldset,
+  Legend,
+  Select,
+  Label,
+  Input,
+  Caption,
+} from "./styled";
 
 const Form = () => {
   const [fromCurrency, setFromCurrency] = useState(currency[0].rate);
@@ -22,15 +30,14 @@ const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Kalkulator walut</legend>
+    <StyledForm onSubmit={onFormSubmit}>
+      <Fieldset>
+        <Legend>Kalkulator walut</Legend>
         <Time />
         <div>
-          <label className="form__label">
+          <Label>
             Przelicz z:
-            <select
-              className="form__select"
+            <Select
               name="currencyFrom"
               value={fromCurrency}
               onChange={(event) =>
@@ -42,15 +49,14 @@ const Form = () => {
                   {item.name} ({item.code})
                 </option>
               ))}
-            </select>
-          </label>
+            </Select>
+          </Label>
         </div>
 
         <div>
-          <label className="form__label">
+          <Label>
             Przelicz na:
-            <select
-              className="form__select"
+            <Select
               name="currencyTo"
               value={toCurrency}
               onChange={(event) =>
@@ -62,37 +68,34 @@ const Form = () => {
                   {item.name} ({item.code})
                 </option>
               ))}
-            </select>
-          </label>
+            </Select>
+          </Label>
         </div>
 
         <div>
-          <label className="form__label">
-            Kwota:*{" "}
-            <input
-              className="form__input"
-              type="number"
-              name="amount"
-              required
-              min="0"
-              step="0.01"
-              value={amount}
-              onChange={({ target }) => setAmount(target.value)}
-            />
-          </label>
+          <Label>Kwota:* </Label>
+          <Input
+            type="number"
+            name="amount"
+            required
+            min="0"
+            step="0.01"
+            value={amount}
+            onChange={({ target }) => setAmount(target.value)}
+          />
         </div>
 
         <div>
           <Calculate />
         </div>
 
-        <div className="form__result" name="result">
+        <div>
           <Result result={result} />
         </div>
-      </fieldset>
+      </Fieldset>
 
-      <p className="form__caption">* Pole wymagane</p>
-    </form>
+      <Caption>* Pole wymagane</Caption>
+    </StyledForm>
   );
 };
 

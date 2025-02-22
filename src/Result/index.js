@@ -1,11 +1,9 @@
 import React from "react";
-import "./style.css";
+import { StyledResult } from "./styled";
 
 const Result = ({ result }) => {
   return (
-    <p className="form__result" name="result">
-      Kwota po przeliczeniu: {(+result).toFixed(2)}
-    </p>
+    <StyledResult>Kwota po przeliczeniu: {(+result).toFixed(2)}</StyledResult>
   );
 };
 

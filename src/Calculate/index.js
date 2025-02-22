@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css";
+import { Button } from "./styled";
 
-const Calculate = () => <button className="form__button">Konwertuj</button>;
+const Calculate = () => <Button>Konwertuj</Button>;
 
 export default Calculate;
