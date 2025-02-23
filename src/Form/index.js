@@ -15,7 +15,9 @@ import {
 
 const Form = () => {
   const [fromCurrency, setFromCurrency] = useState(currency[0].rate);
-  const [toCurrency, setToCurrency] = useState(currency[0].rate);
+  const [toCurrency, setToCurrency] = useState(
+    currency.find((item) => item.code === "USD")?.rate || currency[0].rate
+  );
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState(0);
 
