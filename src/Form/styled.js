@@ -40,6 +40,8 @@ export const Select = styled.select`
   text-align: center;
   margin-bottom: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
+  display: block;
 
   &:hover {
     background-color: rgb(177, 212, 234);
@@ -48,15 +50,18 @@ export const Select = styled.select`
 
 export const Input = styled.input`
   padding: 5px;
+  
+  
   width: 100%;
   color: rgb(31, 119, 119);
   text-align: center;
   margin: 0 0 20px 0;
   border-radius: 10px;
   box-sizing: border-box;
+  display: block;
 `;
 
-export const Caption = styled.caption`
+export const StyledCaption = styled.div`
   max-width: 60%;
   padding: 5px;
   color: rgb(255, 255, 255);

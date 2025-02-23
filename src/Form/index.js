@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Calculate from "../Calculate";
 import Result from "../Result";
 import { currency } from "../currency";
-import Time from "../Time";
+import StyledTime from "../Time";
 import {
   StyledForm,
   Fieldset,
@@ -10,7 +10,7 @@ import {
   Select,
   Label,
   Input,
-  Caption,
+  StyledCaption,
 } from "./styled";
 
 const Form = () => {
@@ -33,7 +33,7 @@ const Form = () => {
     <StyledForm onSubmit={onFormSubmit}>
       <Fieldset>
         <Legend>Kalkulator walut</Legend>
-        <Time />
+        <StyledTime />
         <div>
           <Label>
             Przelicz z:
@@ -72,18 +72,19 @@ const Form = () => {
           </Label>
         </div>
 
-        <div>
-          <Label>Kwota:* </Label>
-          <Input
-            type="number"
-            name="amount"
-            required
-            min="0"
-            step="0.01"
-            value={amount}
-            onChange={({ target }) => setAmount(target.value)}
-          />
-        </div>
+        <Label>
+  Kwota:*
+  <Input
+    type="number"
+    name="amount"
+    required
+    min="0"
+    step="0.01"
+    value={amount}
+    onChange={({ target }) => setAmount(target.value)}
+  />
+</Label>
+
 
         <div>
           <Calculate />
@@ -94,7 +95,7 @@ const Form = () => {
         </div>
       </Fieldset>
 
-      <Caption>* Pole wymagane</Caption>
+      <StyledCaption>* Pole wymagane</StyledCaption>
     </StyledForm>
   );
 };
