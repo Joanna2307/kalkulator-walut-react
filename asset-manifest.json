@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/kalkulator-walut-react/static/js/main.2aef9a55.js",
+    "main.js": "/kalkulator-walut-react/static/js/main.7a6b591a.js",
     "static/js/488.ae19e9da.chunk.js": "/kalkulator-walut-react/static/js/488.ae19e9da.chunk.js",
     "static/media/background.jpg": "/kalkulator-walut-react/static/media/background.41775bd2d26a63e56ded.jpg",
     "index.html": "/kalkulator-walut-react/index.html",
-    "main.2aef9a55.js.map": "/kalkulator-walut-react/static/js/main.2aef9a55.js.map",
+    "main.7a6b591a.js.map": "/kalkulator-walut-react/static/js/main.7a6b591a.js.map",
     "488.ae19e9da.chunk.js.map": "/kalkulator-walut-react/static/js/488.ae19e9da.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2aef9a55.js"
+    "static/js/main.7a6b591a.js"
   ]
 }
