@@ -5,14 +5,14 @@ export const Button = styled.button`
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  color: whitesmoke;
+  color: ${({ theme }) => theme.color.whitesmoke};
   background-color: rgb(31, 119, 119);
   border: none;
 
   &:active {
     background-color: rgb(167, 179, 217);
     transform: scale(1);
-    color: rgb(31, 119, 119);
+    color: ${({ theme }) => theme.color.teal};
   }
 
   &:hover {

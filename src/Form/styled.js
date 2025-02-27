@@ -4,7 +4,7 @@ export const StyledForm = styled.form`
   max-width: 60%;
   margin: auto;
   margin-top: 5%;
-  color: rgb(31, 119, 119);
+  color: ${({ theme }) => theme.color.teal};
 `;
 
 export const Fieldset = styled.fieldset`
@@ -36,7 +36,7 @@ export const Label = styled.label`
 export const Select = styled.select`
   padding: 5px;
   width: 100%;
-  color: rgb(31, 119, 119);
+  color: ${({ theme }) => theme.color.teal};
   text-align: center;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -53,7 +53,7 @@ export const Input = styled.input`
   
   
   width: 100%;
-  color: rgb(31, 119, 119);
+  color: ${({ theme }) => theme.color.teal};
   text-align: center;
   margin: 0 0 20px 0;
   border-radius: 10px;
