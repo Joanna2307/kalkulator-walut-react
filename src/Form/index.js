@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Calculate from "../Calculate";
 import Result from "../Result";
-import { currency } from "../currency";
 import StyledTime from "../Time";
 import {
   StyledForm,
@@ -62,9 +61,8 @@ const [toCurrency, setToCurrency] = useState("USD");
             <Select
               name="currencyFrom"
               value={fromCurrency}
-              onChange={(event) =>
-                setFromCurrency(parseFloat(event.target.value))
-              }
+              onChange={(event) => setFromCurrency(event.target.value)}
+
             >
               {ratesData.rates &&
                 Object.keys(ratesData.rates).map((currency) => (
@@ -82,9 +80,8 @@ const [toCurrency, setToCurrency] = useState("USD");
             <Select
               name="currencyTo"
               value={toCurrency}
-              onChange={(event) =>
-                setToCurrency(parseFloat(event.target.value))
-              }
+              onChange={(event) => setToCurrency(event.target.value)}
+
             >
               {ratesData.rates &&
                 Object.keys(ratesData.rates).map((currency) => (
