@@ -11,15 +11,29 @@ import {
   Label,
   Input,
   StyledCaption,
+  Loading,
+  Failure,
 } from "./styled";
+import {useRatesData} from "./useRatesData";
 
 const Form = () => {
-  const [fromCurrency, setFromCurrency] = useState(currency[0].rate);
-  const [toCurrency, setToCurrency] = useState(
-    currency.find((item) => item.code === "USD")?.rate || currency[0].rate
-  );
+  const ratesData = useRatesData();
+  
+  const [fromCurrency, setFromCurrency] = useState("PLN");
+const [toCurrency, setToCurrency] = useState("USD");
+
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState(0);
+  
+
+  if (ratesData.state === "loading") {
+    return <Loading>Ładowanie...Poczekaj chwilę.</Loading>;
+  }
+
+  if (ratesData.state === "error") {
+    return <Failure>Błąd ładowania danych. Spróbuj ponownie później.</Failure>;
+  }
+
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -27,15 +41,21 @@ const Form = () => {
   };
 
   const calculateResult = (amount, fromCurrency, toCurrency) => {
-    const calculatedResult = (amount / fromCurrency) * toCurrency;
+    const fromRate = ratesData.rates[fromCurrency]?.value || 1;
+    const toRate = ratesData.rates[toCurrency]?.value || 1;
+  
+    const calculatedResult = (amount * toRate) / fromRate;
     setResult(calculatedResult.toFixed(2));
   };
+  
+  
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
       <Fieldset>
         <Legend>Kalkulator walut</Legend>
         <StyledTime />
+        
         <div>
           <Label>
             Przelicz z:
@@ -46,11 +66,12 @@ const Form = () => {
                 setFromCurrency(parseFloat(event.target.value))
               }
             >
-              {currency.map((item) => (
-                <option key={item.code || item.rate} value={item.rate}>
-                  {item.name} ({item.code})
-                </option>
-              ))}
+              {ratesData.rates &&
+                Object.keys(ratesData.rates).map((currency) => (
+                  <option key={currency} value={currency}>
+                    {currency}
+                  </option>
+                ))}
             </Select>
           </Label>
         </div>
@@ -65,11 +86,12 @@ const Form = () => {
                 setToCurrency(parseFloat(event.target.value))
               }
             >
-              {currency.map((item) => (
-                <option key={item.code || item.rate} value={item.rate}>
-                  {item.name} ({item.code})
-                </option>
-              ))}
+              {ratesData.rates &&
+                Object.keys(ratesData.rates).map((currency) => (
+                  <option key={currency} value={currency}>
+                    {currency}
+                  </option>
+                ))}
             </Select>
           </Label>
         </div>

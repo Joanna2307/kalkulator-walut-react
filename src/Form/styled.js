@@ -68,3 +68,29 @@ export const StyledCaption = styled.div`
   font-weight: bolder;
   white-space: nowrap;
 `;
+export const Loading = styled.p`
+color: ${({ theme }) => theme.color.whitesmoke};
+font-size: xx-large;
+font-weight: bold;
+  
+ 
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;            
+  margin: 0;  
+            `;   
+
+
+export const Failure = styled.p`
+color: ${({ theme }) => theme.color.red};
+font-size: xx-large;
+font-weight: bold;
+  
+ 
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;            
+  margin: 0;  
+`;
