@@ -13,26 +13,39 @@ import {
   Loading,
   Failure,
 } from "./styled";
-import {useRatesData} from "./useRatesData";
+import { useRatesData } from "./useRatesData";
+import { formatDate } from "./formatDate";
 
 const Form = () => {
   const ratesData = useRatesData();
-  
+
   const [fromCurrency, setFromCurrency] = useState("PLN");
-const [toCurrency, setToCurrency] = useState("USD");
+  const [toCurrency, setToCurrency] = useState("USD");
 
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState(0);
-  
 
   if (ratesData.state === "loading") {
-    return <Loading>Ładowanie...Poczekaj chwilę.</Loading>;
+    return (
+      <StyledForm>
+        <Fieldset>
+          <Legend>Kalkulator walut</Legend>
+          <Loading>Ładowanie... Poczekaj chwilę.</Loading>
+        </Fieldset>
+      </StyledForm>
+    );
   }
 
   if (ratesData.state === "error") {
-    return <Failure>Błąd ładowania danych. Spróbuj ponownie później.</Failure>;
+    return (
+      <StyledForm>
+        <Fieldset>
+          <Legend>Kalkulator walut</Legend>
+          <Failure>Błąd ładowania danych. Spróbuj ponownie później.</Failure>
+        </Fieldset>
+      </StyledForm>
+    );
   }
-
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -42,19 +55,17 @@ const [toCurrency, setToCurrency] = useState("USD");
   const calculateResult = (amount, fromCurrency, toCurrency) => {
     const fromRate = ratesData.rates[fromCurrency]?.value || 1;
     const toRate = ratesData.rates[toCurrency]?.value || 1;
-  
+
     const calculatedResult = (amount * toRate) / fromRate;
     setResult(calculatedResult.toFixed(2));
   };
-  
-  
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
       <Fieldset>
         <Legend>Kalkulator walut</Legend>
-        <StyledTime />
-        
+        <StyledTime>{formatDate(ratesData.lastUpdated)}</StyledTime>
+
         <div>
           <Label>
             Przelicz z:
@@ -62,7 +73,6 @@ const [toCurrency, setToCurrency] = useState("USD");
               name="currencyFrom"
               value={fromCurrency}
               onChange={(event) => setFromCurrency(event.target.value)}
-
             >
               {ratesData.rates &&
                 Object.keys(ratesData.rates).map((currency) => (
@@ -81,7 +91,6 @@ const [toCurrency, setToCurrency] = useState("USD");
               name="currencyTo"
               value={toCurrency}
               onChange={(event) => setToCurrency(event.target.value)}
-
             >
               {ratesData.rates &&
                 Object.keys(ratesData.rates).map((currency) => (

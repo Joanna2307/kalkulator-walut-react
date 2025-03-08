@@ -50,8 +50,7 @@ export const Select = styled.select`
 
 export const Input = styled.input`
   padding: 5px;
-  
-  
+
   width: 100%;
   color: ${({ theme }) => theme.color.teal};
   text-align: center;
@@ -69,28 +68,17 @@ export const StyledCaption = styled.div`
   white-space: nowrap;
 `;
 export const Loading = styled.p`
-color: ${({ theme }) => theme.color.whitesmoke};
-font-size: xx-large;
-font-weight: bold;
-  
- 
-  display: flex;
-  justify-content: center;  
-  align-items: center;      
-  height: 100vh;            
-  margin: 0;  
-            `;   
-
+  color: ${({ theme }) => theme.color.teal};
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+`;
 
 export const Failure = styled.p`
-color: ${({ theme }) => theme.color.red};
-font-size: xx-large;
-font-weight: bold;
-  
- 
-  display: flex;
-  justify-content: center;  
-  align-items: center;      
-  height: 100vh;            
-  margin: 0;  
+  color: ${({ theme }) => theme.color.red};
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
 `;
